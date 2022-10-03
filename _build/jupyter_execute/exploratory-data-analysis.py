@@ -7,11 +7,7 @@
 
 
 
-# In[ ]:
-
-
-
-
+# # Exploratory Data Analysis
 
 # In[1]:
 
@@ -22,10 +18,16 @@ preferred_columns = ['age', 'status', 'sex', 'orientation', 'body_type',
                      'diet', 'drinks', 'drugs', 'education', 'ethnicity', 
                      'height', 'income', 'job', 'last_online', 'location', 'sign']
 dating_profiles = dating_profiles[preferred_columns]
-dating_profiles.head(4)
+dating_profiles[['age', 'status', 'sex', 'orientation', 'body_type']].head(4)
 
 
 # In[2]:
+
+
+dating_profiles.to_csv("dating_profiles.csv")
+
+
+# In[3]:
 
 
 print("Mean:", dating_profiles["age"].mean())
@@ -34,16 +36,10 @@ print("Max:", dating_profiles["age"].max())
 print("Min:", dating_profiles["age"].min())
 
 
-# In[3]:
-
-
-dating_profiles.describe()
-
-
 # In[4]:
 
 
-dating_profiles[dating_profiles["age"]> 80]
+dating_profiles.describe()
 
 
 # In[5]:
