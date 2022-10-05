@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Exploratory Data Analysis &#8212; A Pinch of Statistics</title>
+    <title>Introduction to Statistics &#8212; A Pinch of Statistics</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
@@ -130,7 +132,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Exploratory Data Analysis
+   Introduction to Statistics
   </a>
  </li>
 </ul>
@@ -339,15 +341,152 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#violin-plot">
-   Violin Plot
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Introduction to Statistics
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-statistics">
+     What is Statistics?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-data">
+     What is Data?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-are-the-various-types-of-data">
+     What are the various types of data?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#collecting-and-summarizing-data">
+     Collecting and Summarizing Data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#simple-random-sampling">
+       Simple random sampling
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#stratified-random-sampling">
+       Stratified random sampling
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cluster-random-sampling">
+       Cluster random sampling
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#multistage-random-sampling">
+       Multistage random sampling
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sample-with-and-without-replacement">
+       Sample with and without replacement
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#measures-of-central-tendency">
+     Measures of Central Tendency
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#percentiles">
+       Percentiles
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#median">
+       Median
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mean">
+       Mean
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#measures-of-spread-variability">
+     Measures of Spread (Variability)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#range">
+       Range
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#variance">
+       Variance
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#standard-deviation">
+       Standard deviation
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#interquartile-range">
+       Interquartile range
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#multiple-variables">
-   Multiple Variables
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exploratory-data-analysis">
+   Exploratory Data Analysis
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sampling-from-population">
+     Sampling from Population
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploring-the-dating-profiles">
+     Exploring the Dating Profiles
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#single-variables">
+     Single Variables
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiple-variables">
+     Multiple Variables
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exploring-two-categorical-variables">
+       Exploring two categorical variables
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exploring-two-numerical-variables">
+       Exploring two numerical variables
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exploring-a-numeric-variable-along-with-a-categorical-variable">
+       Exploring a numeric variable along with a categorical variable
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -358,7 +497,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Exploratory Data Analysis</h1>
+                <h1>Introduction to Statistics</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -368,15 +507,152 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#violin-plot">
-   Violin Plot
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Introduction to Statistics
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-statistics">
+     What is Statistics?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-data">
+     What is Data?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-are-the-various-types-of-data">
+     What are the various types of data?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#collecting-and-summarizing-data">
+     Collecting and Summarizing Data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#simple-random-sampling">
+       Simple random sampling
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#stratified-random-sampling">
+       Stratified random sampling
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cluster-random-sampling">
+       Cluster random sampling
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#multistage-random-sampling">
+       Multistage random sampling
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sample-with-and-without-replacement">
+       Sample with and without replacement
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#measures-of-central-tendency">
+     Measures of Central Tendency
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#percentiles">
+       Percentiles
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#median">
+       Median
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mean">
+       Mean
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#measures-of-spread-variability">
+     Measures of Spread (Variability)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#range">
+       Range
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#variance">
+       Variance
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#standard-deviation">
+       Standard deviation
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#interquartile-range">
+       Interquartile range
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#multiple-variables">
-   Multiple Variables
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exploratory-data-analysis">
+   Exploratory Data Analysis
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sampling-from-population">
+     Sampling from Population
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploring-the-dating-profiles">
+     Exploring the Dating Profiles
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#single-variables">
+     Single Variables
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiple-variables">
+     Multiple Variables
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exploring-two-categorical-variables">
+       Exploring two categorical variables
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exploring-two-numerical-variables">
+       Exploring two numerical variables
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exploring-a-numeric-variable-along-with-a-categorical-variable">
+       Exploring a numeric variable along with a categorical variable
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -388,15 +664,1595 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="exploratory-data-analysis">
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-statistics">
+<h1>Introduction to Statistics<a class="headerlink" href="#introduction-to-statistics" title="Permalink to this headline">#</a></h1>
+<section id="what-is-statistics">
+<h2>What is Statistics?<a class="headerlink" href="#what-is-statistics" title="Permalink to this headline">#</a></h2>
+<p>The art and science of answering questions and exploring ideas through the processes of gathering data, describing data, and making generalizations about a population on the basis of a smaller sample. In this process, we may divide our objectives to study the data about some population into the following two-</p>
+<ul class="simple">
+<li><p>Descriptive: It allows us to describe and organize the inevitable variability among observations;</p></li>
+<li><p>Inferential: It allows us to to generalize beyond limited sets of observations (this limited set of obervations are the ones that we have drawn from the original population) by adjusting for the pervasive effects of variability;</p></li>
+</ul>
+</section>
+<section id="what-is-data">
+<h2>What is Data?<a class="headerlink" href="#what-is-data" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="what-are-the-various-types-of-data">
+<h2>What are the various types of data?<a class="headerlink" href="#what-are-the-various-types-of-data" title="Permalink to this headline">#</a></h2>
+<p>Generally, in Math and Statistics, the variables may be Quantitative (Numerical) or Qualtitative (Categorical). These two major classfication of data maybe further divided into the following-</p>
+<ul class="simple">
+<li><p>Numerical</p></li>
+<li><p>Discrete</p></li>
+<li><p>Continuous</p></li>
+<li><p>Categorical</p></li>
+<li><p>Ordinal</p></li>
+<li><p>Nominal</p></li>
+</ul>
+<p><strong>Numerical variables</strong></p>
+<p>A numerical variable can take a wide range of numerical values, and it is sensible to add, subtract, or take averages with those values.</p>
+<ul class="simple">
+<li><p><strong>Discrete</strong></p></li>
+</ul>
+<p>A discrete numerical variable is a variable whose value is obtained by counting. For example, the number of students present in a class or the number of heads when flipping three coins.</p>
+<ul class="simple">
+<li><p><strong>Continuous</strong></p></li>
+</ul>
+<p>A continuous variable is a numerical variable whose value is obtained by measuring. For example, the height of the students in class or the time it takes a student to get to school.</p>
+<p><strong>Categorical variables</strong></p>
+<p>A categorical variable takes a limited, and usually fixed, number of possible values (categories). The possible values are called the variable’s levels.</p>
+<ul class="simple">
+<li><p><strong>Binary</strong>:
+A Binary variable is a categorical variable whose outcomes may take only one of the two possible values. For example, Male and Female.</p></li>
+<li><p><strong>Ordinal</strong>:
+An ordinal variable is a categorical variable whose levels have a natural notion of order. For example, the age range of the students or the agreement with a statement (“strongly agree”, “agree”, “disagree”, etc).</p></li>
+<li><p><strong>Nominal</strong>:
+A nominal variable is a categorical variable without any notion of order. For example, we can consider genders or blood type.</p></li>
+</ul>
+</section>
+<section id="collecting-and-summarizing-data">
+<h2>Collecting and Summarizing Data<a class="headerlink" href="#collecting-and-summarizing-data" title="Permalink to this headline">#</a></h2>
+<p>The lesson starts with a discussion about how to collect data and different methods to use. Once the data is collected, we need to summarize the data. How to summarize the data depends on which variable type we have. All of these concepts will be presented here.</p>
+<p>Statistical methods are based on the notion of implied randomness. If observational data is not collected in a random framework from a population, these statistical methods – the estimates and errors associated with the estimates – are not reliable.</p>
+<section id="simple-random-sampling">
+<h3>Simple random sampling<a class="headerlink" href="#simple-random-sampling" title="Permalink to this headline">#</a></h3>
+<p>In general, a sample is referred to a Simple Random Sampling if each case in the population has an equal chance of being included in the final sample and knowing that a case is included in a sample does not provide useful information about which other cases are included.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
+<span class="n">dating_profiles</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;dating_profiles.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">dating_profiles</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">5</span><span class="p">)[[</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="s2">&quot;sex&quot;</span><span class="p">,</span> <span class="s2">&quot;orientation&quot;</span><span class="p">,</span> <span class="s2">&quot;diet&quot;</span><span class="p">,</span> <span class="s2">&quot;drinks&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>status</th>
+      <th>sex</th>
+      <th>orientation</th>
+      <th>diet</th>
+      <th>drinks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>31671</th>
+      <td>34</td>
+      <td>single</td>
+      <td>f</td>
+      <td>straight</td>
+      <td>anything</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>12377</th>
+      <td>33</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>strictly anything</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2320</th>
+      <td>28</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>NaN</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>48279</th>
+      <td>24</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>strictly anything</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>26267</th>
+      <td>28</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>NaN</td>
+      <td>socially</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="stratified-random-sampling">
+<h3>Stratified random sampling<a class="headerlink" href="#stratified-random-sampling" title="Permalink to this headline">#</a></h3>
+<p>In Stratified Random Sampling the population is divided into groups called strata. The strata are chosen so that similar cases are grouped together, then a second sampling method, usually simple random sampling, is employed within each stratum.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Break the code and find more extreme cases</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
+<span class="n">dating_profiles</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;dating_profiles.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">dating_profiles</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;orientation&quot;</span><span class="p">,</span> <span class="n">group_keys</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>\
+<span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">2</span><span class="p">))[[</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="s2">&quot;sex&quot;</span><span class="p">,</span> <span class="s2">&quot;orientation&quot;</span><span class="p">,</span> <span class="s2">&quot;diet&quot;</span><span class="p">,</span> <span class="s2">&quot;drinks&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>status</th>
+      <th>sex</th>
+      <th>orientation</th>
+      <th>diet</th>
+      <th>drinks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>815</th>
+      <td>25</td>
+      <td>available</td>
+      <td>f</td>
+      <td>bisexual</td>
+      <td>mostly anything</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>32242</th>
+      <td>22</td>
+      <td>single</td>
+      <td>f</td>
+      <td>bisexual</td>
+      <td>NaN</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>35215</th>
+      <td>43</td>
+      <td>single</td>
+      <td>f</td>
+      <td>gay</td>
+      <td>mostly anything</td>
+      <td>not at all</td>
+    </tr>
+    <tr>
+      <th>1318</th>
+      <td>22</td>
+      <td>single</td>
+      <td>m</td>
+      <td>gay</td>
+      <td>mostly anything</td>
+      <td>rarely</td>
+    </tr>
+    <tr>
+      <th>8530</th>
+      <td>34</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>NaN</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>53347</th>
+      <td>33</td>
+      <td>single</td>
+      <td>f</td>
+      <td>straight</td>
+      <td>kosher</td>
+      <td>socially</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dating_profiles</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;drinks&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>status</th>
+      <th>sex</th>
+      <th>orientation</th>
+      <th>body_type</th>
+      <th>diet</th>
+      <th>drugs</th>
+      <th>education</th>
+      <th>ethnicity</th>
+      <th>height</th>
+      <th>income</th>
+      <th>job</th>
+      <th>last_online</th>
+      <th>location</th>
+      <th>sign</th>
+    </tr>
+    <tr>
+      <th>drinks</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>desperately</th>
+      <td>322</td>
+      <td>322</td>
+      <td>322</td>
+      <td>322</td>
+      <td>299</td>
+      <td>233</td>
+      <td>232</td>
+      <td>289</td>
+      <td>269</td>
+      <td>322</td>
+      <td>322</td>
+      <td>277</td>
+      <td>322</td>
+      <td>322</td>
+      <td>243</td>
+    </tr>
+    <tr>
+      <th>not at all</th>
+      <td>3267</td>
+      <td>3267</td>
+      <td>3267</td>
+      <td>3267</td>
+      <td>3039</td>
+      <td>1983</td>
+      <td>3067</td>
+      <td>2848</td>
+      <td>3007</td>
+      <td>3267</td>
+      <td>3267</td>
+      <td>2868</td>
+      <td>3267</td>
+      <td>3267</td>
+      <td>2770</td>
+    </tr>
+    <tr>
+      <th>often</th>
+      <td>5164</td>
+      <td>5164</td>
+      <td>5164</td>
+      <td>5164</td>
+      <td>4656</td>
+      <td>3196</td>
+      <td>3829</td>
+      <td>4620</td>
+      <td>4675</td>
+      <td>5164</td>
+      <td>5164</td>
+      <td>4531</td>
+      <td>5164</td>
+      <td>5164</td>
+      <td>4289</td>
+    </tr>
+    <tr>
+      <th>rarely</th>
+      <td>5957</td>
+      <td>5957</td>
+      <td>5957</td>
+      <td>5957</td>
+      <td>5487</td>
+      <td>3465</td>
+      <td>5188</td>
+      <td>5374</td>
+      <td>5494</td>
+      <td>5957</td>
+      <td>5957</td>
+      <td>5328</td>
+      <td>5957</td>
+      <td>5957</td>
+      <td>5034</td>
+    </tr>
+    <tr>
+      <th>socially</th>
+      <td>41780</td>
+      <td>41780</td>
+      <td>41780</td>
+      <td>41780</td>
+      <td>38399</td>
+      <td>25382</td>
+      <td>31531</td>
+      <td>38001</td>
+      <td>38141</td>
+      <td>41780</td>
+      <td>41780</td>
+      <td>36756</td>
+      <td>41780</td>
+      <td>41780</td>
+      <td>34647</td>
+    </tr>
+    <tr>
+      <th>very often</th>
+      <td>471</td>
+      <td>471</td>
+      <td>471</td>
+      <td>471</td>
+      <td>438</td>
+      <td>319</td>
+      <td>406</td>
+      <td>396</td>
+      <td>413</td>
+      <td>471</td>
+      <td>471</td>
+      <td>408</td>
+      <td>471</td>
+      <td>471</td>
+      <td>381</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
+<span class="n">dating_profiles</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;dating_profiles.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">dating_profiles</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;diet&quot;</span><span class="p">,</span> <span class="n">group_keys</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>\
+<span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="mi">2</span><span class="p">)))[[</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="s2">&quot;sex&quot;</span><span class="p">,</span> <span class="s2">&quot;orientation&quot;</span><span class="p">,</span> <span class="s2">&quot;diet&quot;</span><span class="p">,</span> <span class="s2">&quot;drinks&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>status</th>
+      <th>sex</th>
+      <th>orientation</th>
+      <th>diet</th>
+      <th>drinks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>28226</th>
+      <td>29</td>
+      <td>single</td>
+      <td>f</td>
+      <td>straight</td>
+      <td>anything</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>53549</th>
+      <td>31</td>
+      <td>single</td>
+      <td>f</td>
+      <td>straight</td>
+      <td>anything</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>29349</th>
+      <td>28</td>
+      <td>single</td>
+      <td>f</td>
+      <td>straight</td>
+      <td>halal</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>48549</th>
+      <td>23</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>halal</td>
+      <td>not at all</td>
+    </tr>
+    <tr>
+      <th>13040</th>
+      <td>28</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>kosher</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>53196</th>
+      <td>28</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>kosher</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>46708</th>
+      <td>34</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>mostly anything</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>58968</th>
+      <td>48</td>
+      <td>single</td>
+      <td>m</td>
+      <td>gay</td>
+      <td>mostly anything</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>4852</th>
+      <td>29</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>mostly halal</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>7684</th>
+      <td>35</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>mostly halal</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>798</th>
+      <td>21</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>mostly kosher</td>
+      <td>rarely</td>
+    </tr>
+    <tr>
+      <th>29563</th>
+      <td>44</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>mostly kosher</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>30152</th>
+      <td>43</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>mostly other</td>
+      <td>often</td>
+    </tr>
+    <tr>
+      <th>59371</th>
+      <td>48</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>mostly other</td>
+      <td>rarely</td>
+    </tr>
+    <tr>
+      <th>36671</th>
+      <td>29</td>
+      <td>single</td>
+      <td>m</td>
+      <td>gay</td>
+      <td>mostly vegan</td>
+      <td>rarely</td>
+    </tr>
+    <tr>
+      <th>17371</th>
+      <td>32</td>
+      <td>single</td>
+      <td>f</td>
+      <td>straight</td>
+      <td>mostly vegan</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>53151</th>
+      <td>32</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>mostly vegetarian</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>25909</th>
+      <td>32</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>mostly vegetarian</td>
+      <td>not at all</td>
+    </tr>
+    <tr>
+      <th>46070</th>
+      <td>27</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>other</td>
+      <td>rarely</td>
+    </tr>
+    <tr>
+      <th>40331</th>
+      <td>62</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>other</td>
+      <td>rarely</td>
+    </tr>
+    <tr>
+      <th>34410</th>
+      <td>30</td>
+      <td>single</td>
+      <td>m</td>
+      <td>bisexual</td>
+      <td>strictly anything</td>
+      <td>very often</td>
+    </tr>
+    <tr>
+      <th>43357</th>
+      <td>26</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>strictly anything</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>44309</th>
+      <td>20</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>strictly halal</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>53477</th>
+      <td>25</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>strictly halal</td>
+      <td>not at all</td>
+    </tr>
+    <tr>
+      <th>13145</th>
+      <td>43</td>
+      <td>single</td>
+      <td>f</td>
+      <td>gay</td>
+      <td>strictly kosher</td>
+      <td>not at all</td>
+    </tr>
+    <tr>
+      <th>30929</th>
+      <td>32</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>strictly kosher</td>
+      <td>not at all</td>
+    </tr>
+    <tr>
+      <th>28917</th>
+      <td>36</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>strictly other</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>40044</th>
+      <td>34</td>
+      <td>single</td>
+      <td>m</td>
+      <td>gay</td>
+      <td>strictly other</td>
+      <td>rarely</td>
+    </tr>
+    <tr>
+      <th>44208</th>
+      <td>29</td>
+      <td>married</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>strictly vegan</td>
+      <td>very often</td>
+    </tr>
+    <tr>
+      <th>39446</th>
+      <td>22</td>
+      <td>single</td>
+      <td>m</td>
+      <td>gay</td>
+      <td>strictly vegan</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>24711</th>
+      <td>28</td>
+      <td>single</td>
+      <td>f</td>
+      <td>straight</td>
+      <td>strictly vegetarian</td>
+      <td>rarely</td>
+    </tr>
+    <tr>
+      <th>44876</th>
+      <td>27</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>strictly vegetarian</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>54184</th>
+      <td>58</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>vegan</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>36324</th>
+      <td>59</td>
+      <td>single</td>
+      <td>f</td>
+      <td>straight</td>
+      <td>vegan</td>
+      <td>not at all</td>
+    </tr>
+    <tr>
+      <th>19896</th>
+      <td>42</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>vegetarian</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>57343</th>
+      <td>25</td>
+      <td>available</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>vegetarian</td>
+      <td>often</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="cluster-random-sampling">
+<h3>Cluster random sampling<a class="headerlink" href="#cluster-random-sampling" title="Permalink to this headline">#</a></h3>
+<p>In a Cluster Random Sample, we break up the population into many groups, called clusters. Then we sample a fixed number of clusters and include all observations from each of those clusters in the sample.</p>
+</section>
+<section id="multistage-random-sampling">
+<h3>Multistage random sampling<a class="headerlink" href="#multistage-random-sampling" title="Permalink to this headline">#</a></h3>
+<p>A Multistage Random Sample is like a cluster sample, but rather than keeping all observations in each cluster, we collect a random sample within each selected cluster.</p>
+</section>
+<section id="sample-with-and-without-replacement">
+<h3>Sample with and without replacement<a class="headerlink" href="#sample-with-and-without-replacement" title="Permalink to this headline">#</a></h3>
+<p>When a sampling unit is drawn from a finite population and is returned to that population, after its characteristics have been recorded, before the next unit is drawn, the sampling is said to be “with replacement”.</p>
+<p>Otherwise, the sampling is said to be “without replacement”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># sampling with replacement</span>
+<span class="n">dating_profiles</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)[[</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="s2">&quot;sex&quot;</span><span class="p">,</span> <span class="s2">&quot;orientation&quot;</span><span class="p">,</span> <span class="s2">&quot;diet&quot;</span><span class="p">,</span> <span class="s2">&quot;drinks&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>status</th>
+      <th>sex</th>
+      <th>orientation</th>
+      <th>diet</th>
+      <th>drinks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>22</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>strictly anything</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>35</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>mostly other</td>
+      <td>often</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>38</td>
+      <td>available</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>anything</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>23</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>vegetarian</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>29</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>NaN</td>
+      <td>socially</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># sampling without replacement</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">dating_profiles</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;age&quot;</span><span class="p">)</span>\
+<span class="p">[[</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span> <span class="s2">&quot;sex&quot;</span><span class="p">,</span> <span class="s2">&quot;orientation&quot;</span><span class="p">,</span> <span class="s2">&quot;diet&quot;</span><span class="p">,</span> <span class="s2">&quot;drinks&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>status</th>
+      <th>sex</th>
+      <th>orientation</th>
+      <th>diet</th>
+      <th>drinks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>59327</th>
+      <td>20</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>NaN</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>39067</th>
+      <td>21</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>mostly anything</td>
+      <td>not at all</td>
+    </tr>
+    <tr>
+      <th>39067</th>
+      <td>21</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>mostly anything</td>
+      <td>not at all</td>
+    </tr>
+    <tr>
+      <th>22984</th>
+      <td>24</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>NaN</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>2763</th>
+      <td>24</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>NaN</td>
+      <td>rarely</td>
+    </tr>
+    <tr>
+      <th>3750</th>
+      <td>25</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>NaN</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>8029</th>
+      <td>28</td>
+      <td>single</td>
+      <td>m</td>
+      <td>gay</td>
+      <td>NaN</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>55553</th>
+      <td>29</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>NaN</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>16724</th>
+      <td>29</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>mostly anything</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>56410</th>
+      <td>29</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>mostly anything</td>
+      <td>often</td>
+    </tr>
+    <tr>
+      <th>25583</th>
+      <td>29</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>NaN</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>30984</th>
+      <td>29</td>
+      <td>seeing someone</td>
+      <td>m</td>
+      <td>gay</td>
+      <td>NaN</td>
+      <td>not at all</td>
+    </tr>
+    <tr>
+      <th>23648</th>
+      <td>33</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>NaN</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>58354</th>
+      <td>34</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>anything</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>31309</th>
+      <td>37</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>anything</td>
+      <td>rarely</td>
+    </tr>
+    <tr>
+      <th>31309</th>
+      <td>37</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>anything</td>
+      <td>rarely</td>
+    </tr>
+    <tr>
+      <th>45051</th>
+      <td>45</td>
+      <td>single</td>
+      <td>f</td>
+      <td>straight</td>
+      <td>NaN</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>4320</th>
+      <td>45</td>
+      <td>single</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>NaN</td>
+      <td>often</td>
+    </tr>
+    <tr>
+      <th>48356</th>
+      <td>49</td>
+      <td>single</td>
+      <td>m</td>
+      <td>gay</td>
+      <td>NaN</td>
+      <td>socially</td>
+    </tr>
+    <tr>
+      <th>9232</th>
+      <td>57</td>
+      <td>single</td>
+      <td>f</td>
+      <td>straight</td>
+      <td>mostly anything</td>
+      <td>socially</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(100, 16)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="measures-of-central-tendency">
+<h2>Measures of Central Tendency<a class="headerlink" href="#measures-of-central-tendency" title="Permalink to this headline">#</a></h2>
+<section id="percentiles">
+<h3>Percentiles<a class="headerlink" href="#percentiles" title="Permalink to this headline">#</a></h3>
+<p>A percentile is a value below which there is a given percentage of values in the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dating_profiles</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    59946.000000
+mean        32.340290
+std          9.452779
+min         18.000000
+25%         26.000000
+50%         30.000000
+75%         37.000000
+max        110.000000
+Name: age, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="median">
+<h3>Median<a class="headerlink" href="#median" title="Permalink to this headline">#</a></h3>
+<p>The median is the 50th percentile</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Median (odd number of observations):&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.50</span><span class="p">))</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Median (odd number of observations):&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.50</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Median (odd number of observations): 5.5
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="mf">7026e5</span><span class="n">c5875d</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Median (odd number of observations):&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.50</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;Series&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data:&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Length:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">middle_element</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">%</span><span class="k">2</span>==0:
+    <span class="n">lower</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">middle_element</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span>
+    <span class="n">upper</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">middle_element</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span>
+    <span class="n">median</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">lower</span><span class="p">]</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="n">upper</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Median:&quot;</span><span class="p">,</span> <span class="n">median</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">index</span><span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">middle_element</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Median:&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Median computed by numpy:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data: [ 0  1  2  3  4  5  6  7  8  9 10 11]
+Length: 12
+Median: 5.5
+Median computed by numpy: 5.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data:&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Length:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">middle_element</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">%</span><span class="k">2</span>==0:
+    <span class="n">lower</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">middle_element</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span>
+    <span class="n">upper</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">middle_element</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span>
+    <span class="n">median</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">lower</span><span class="p">]</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="n">upper</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Median:&quot;</span><span class="p">,</span> <span class="n">median</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">index</span><span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">middle_element</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Median:&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Median computed by numpy:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data: [ 0  1  2  3  4  5  6  7  8  9 10 11 12]
+Length: 13
+Median: 6
+Median computed by numpy: 6.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="mean">
+<h3>Mean<a class="headerlink" href="#mean" title="Permalink to this headline">#</a></h3>
+<p>The most common summary statistic is the mean, which is meant to describe the central tendency of the data.</p>
+<p>The population mean is expressed by-
+$<span class="math notranslate nohighlight">\( \mu = \frac{1}{N} \sum_{i=1}^{N} x_i\)</span>$</p>
+<p>Similarly, the sample mean is expressed by-
+$<span class="math notranslate nohighlight">\( \overline{x} = \frac{1}{n} \sum_{i=1}^{n} x_i\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data:&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+<span class="n">sum_of_observations</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">mean</span> <span class="o">=</span> <span class="n">sum_of_observations</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean:&quot;</span><span class="p">,</span> <span class="n">mean</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data: [ 0  1  2  3  4  5  6  7  8  9 10 11 12]
+Mean: 6.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="measures-of-spread-variability">
+<h2>Measures of Spread (Variability)<a class="headerlink" href="#measures-of-spread-variability" title="Permalink to this headline">#</a></h2>
+<section id="range">
+<h3>Range<a class="headerlink" href="#range" title="Permalink to this headline">#</a></h3>
+<p>It is the difference between highest and lowest values of a variable</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data:&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Range:&quot;</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">-</span><span class="nb">min</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data: [ 5  6  7  8  9 10 11 12]
+Range: 7
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="variance">
+<h3>Variance<a class="headerlink" href="#variance" title="Permalink to this headline">#</a></h3>
+<p>The variance is a summary statistic intended to describe the variability or spread of a distribution.</p>
+<div class="math notranslate nohighlight">
+\[\sigma^2 = \frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2\]</div>
+<div class="math notranslate nohighlight">
+\[S^2 = \frac{1}{n - 1} \sum_{i=1}^{n} (x_i - \overline{x})^2\]</div>
+<p>The term <span class="math notranslate nohighlight">\(x_i - \overline{x}\)</span> is called the deviation from the mean, so the variance is the mean squared deviation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">mean_deviations</span> <span class="o">=</span> <span class="n">data</span> <span class="o">-</span> <span class="n">mean</span>
+<span class="n">mean_deviations_squared</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">mean_deviations</span><span class="p">)</span>
+<span class="n">sum_mean_deviations_squared</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">mean_deviations_squared</span><span class="p">)</span>
+<span class="n">variance</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span> <span class="o">*</span> <span class="n">sum_mean_deviations_squared</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data:&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean deviations:&quot;</span><span class="p">,</span> <span class="n">mean_deviations</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean deviations squared:&quot;</span><span class="p">,</span> <span class="n">mean_deviations_squared</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum of squared deviations:&quot;</span><span class="p">,</span> <span class="n">sum_mean_deviations_squared</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Variance:&quot;</span><span class="p">,</span> <span class="n">variance</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data: [ 0  1  2  3  4  5  6  7  8  9 10 11 12]
+Mean deviations: [-6. -5. -4. -3. -2. -1.  0.  1.  2.  3.  4.  5.  6.]
+Mean deviations squared: [36. 25. 16.  9.  4.  1.  0.  1.  4.  9. 16. 25. 36.]
+Sum of squared deviations: 182.0
+Variance: 14.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>14.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="standard-deviation">
+<h3>Standard deviation<a class="headerlink" href="#standard-deviation" title="Permalink to this headline">#</a></h3>
+<p>The square root of the variance, S, is the standard deviation.
+$<span class="math notranslate nohighlight">\(\sigma = \sqrt{ \frac{1}{N} \sum_{i=1}^{N} (x_i - \mu})^2\)</span>$</p>
+<div class="math notranslate nohighlight">
+\[S = \sqrt{ \frac{1}{n - 1} \sum_{i=1}^{n} (x_i - \overline{x}})^2\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">mean_deviations</span> <span class="o">=</span> <span class="n">data</span> <span class="o">-</span> <span class="n">mean</span>
+<span class="n">mean_deviations_squared</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">mean_deviations</span><span class="p">)</span>
+<span class="n">sum_mean_deviations_squared</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">mean_deviations_squared</span><span class="p">)</span>
+<span class="n">variance</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span> <span class="o">*</span> <span class="n">sum_mean_deviations_squared</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data:&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean deviations:&quot;</span><span class="p">,</span> <span class="n">mean_deviations</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean deviations squared:&quot;</span><span class="p">,</span> <span class="n">mean_deviations_squared</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum of squared deviations:&quot;</span><span class="p">,</span> <span class="n">sum_mean_deviations_squared</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Variance:&quot;</span><span class="p">,</span> <span class="n">variance</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Standard deviation:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">variance</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data: [ 0  1  2  3  4  5  6  7  8  9 10 11 12]
+Mean deviations: [-6. -5. -4. -3. -2. -1.  0.  1.  2.  3.  4.  5.  6.]
+Mean deviations squared: [36. 25. 16.  9.  4.  1.  0.  1.  4.  9. 16. 25. 36.]
+Sum of squared deviations: 182.0
+Variance: 14.0
+Standard deviation: 3.7416573867739413
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.7416573867739413
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="interquartile-range">
+<h3>Interquartile range<a class="headerlink" href="#interquartile-range" title="Permalink to this headline">#</a></h3>
+<p>The IQR is computed as <span class="math notranslate nohighlight">\(IQR = Q3 - Q1\)</span>, where Q1 and Q3 are the 25th and 75th percentiles.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">Series</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">Q1</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">Q3</span> <span class="o">=</span> <span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data:&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="n">IQR</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">-</span> <span class="n">Q1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inter-Quartile Range:&quot;</span><span class="p">,</span> <span class="n">IQR</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data: [ 0  1  2  3  4  5  6  7  8  9 10 11 12]
+Inter-Quartile Range: 6.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="exploratory-data-analysis">
 <h1>Exploratory Data Analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline">#</a></h1>
+<section id="sampling-from-population">
+<h2>Sampling from Population<a class="headerlink" href="#sampling-from-population" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">flights</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;course-data/flight-delays.csv&#39;</span><span class="p">)</span>
+<span class="n">flights</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)[[</span><span class="s1">&#39;YEAR&#39;</span><span class="p">,</span> <span class="s1">&#39;QUARTER&#39;</span><span class="p">,</span> <span class="s1">&#39;MONTH&#39;</span><span class="p">,</span> <span class="s1">&#39;DAY_OF_MONTH&#39;</span><span class="p">,</span> <span class="s1">&#39;DAY_OF_WEEK&#39;</span><span class="p">,</span> <span class="s1">&#39;FL_NUM&#39;</span><span class="p">,</span> <span class="s1">&#39;ORIGIN&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;DEST&#39;</span><span class="p">,</span> <span class="s1">&#39;DEP_TIME&#39;</span><span class="p">,</span> <span class="s1">&#39;DEP_DELAY&#39;</span><span class="p">,</span> <span class="s1">&#39;ARR_TIME&#39;</span><span class="p">,</span> <span class="s1">&#39;ARR_DELAY&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>YEAR</th>
+      <th>QUARTER</th>
+      <th>MONTH</th>
+      <th>DAY_OF_MONTH</th>
+      <th>DAY_OF_WEEK</th>
+      <th>FL_NUM</th>
+      <th>ORIGIN</th>
+      <th>DEST</th>
+      <th>DEP_TIME</th>
+      <th>DEP_DELAY</th>
+      <th>ARR_TIME</th>
+      <th>ARR_DELAY</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2016</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+      <td>1399</td>
+      <td>ATL</td>
+      <td>SEA</td>
+      <td>1907.0</td>
+      <td>2.0</td>
+      <td>2102.0</td>
+      <td>-41.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2016</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+      <td>1476</td>
+      <td>DTW</td>
+      <td>MSP</td>
+      <td>1344.0</td>
+      <td>-1.0</td>
+      <td>1439.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2016</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+      <td>1597</td>
+      <td>ATL</td>
+      <td>SEA</td>
+      <td>942.0</td>
+      <td>2.0</td>
+      <td>1142.0</td>
+      <td>-33.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2016</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+      <td>1768</td>
+      <td>SEA</td>
+      <td>MSP</td>
+      <td>820.0</td>
+      <td>1.0</td>
+      <td>1345.0</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2016</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+      <td>1823</td>
+      <td>SEA</td>
+      <td>DTW</td>
+      <td>2256.0</td>
+      <td>-4.0</td>
+      <td>615.0</td>
+      <td>8.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">flights</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;YEAR&#39;, &#39;QUARTER&#39;, &#39;MONTH&#39;, &#39;DAY_OF_MONTH&#39;, &#39;DAY_OF_WEEK&#39;,
+       &#39;UNIQUE_CARRIER&#39;, &#39;TAIL_NUM&#39;, &#39;FL_NUM&#39;, &#39;ORIGIN_AIRPORT_ID&#39;, &#39;ORIGIN&#39;,
+       &#39;DEST_AIRPORT_ID&#39;, &#39;DEST&#39;, &#39;CRS_DEP_TIME&#39;, &#39;DEP_TIME&#39;, &#39;DEP_DELAY&#39;,
+       &#39;DEP_DEL15&#39;, &#39;CRS_ARR_TIME&#39;, &#39;ARR_TIME&#39;, &#39;ARR_DELAY&#39;, &#39;ARR_DEL15&#39;,
+       &#39;CANCELLED&#39;, &#39;DIVERTED&#39;, &#39;CRS_ELAPSED_TIME&#39;, &#39;ACTUAL_ELAPSED_TIME&#39;,
+       &#39;DISTANCE&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">delay_bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">201</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">flights</span><span class="p">[[</span><span class="s1">&#39;ARR_DELAY&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="n">delay_bins</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Population&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Population&#39;)
+</pre></div>
+</div>
+<img alt="_images/exploratory-data-analysis_44_1.png" src="_images/exploratory-data-analysis_44_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">delta</span> <span class="o">=</span> <span class="n">flights</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">delay_bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">201</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">delta</span><span class="p">[[</span><span class="s1">&#39;ARR_DELAY&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="n">delay_bins</span><span class="p">,</span> 
+                               <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;skyblue&#39;</span><span class="p">,</span>
+                               <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Sample: 1000 randomly drawn observations&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Sample: 1000 randomly drawn observations&#39;)
+</pre></div>
+</div>
+<img alt="_images/exploratory-data-analysis_45_1.png" src="_images/exploratory-data-analysis_45_1.png" />
+</div>
+</div>
+</section>
+<section id="exploring-the-dating-profiles">
+<h2>Exploring the Dating Profiles<a class="headerlink" href="#exploring-the-dating-profiles" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
 <span class="n">dating_profiles</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;course-data/dating_profiles.csv&quot;</span><span class="p">)</span>
+
 <span class="n">preferred_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">,</span> <span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="s1">&#39;orientation&#39;</span><span class="p">,</span> <span class="s1">&#39;body_type&#39;</span><span class="p">,</span> 
                      <span class="s1">&#39;diet&#39;</span><span class="p">,</span> <span class="s1">&#39;drinks&#39;</span><span class="p">,</span> <span class="s1">&#39;drugs&#39;</span><span class="p">,</span> <span class="s1">&#39;education&#39;</span><span class="p">,</span> <span class="s1">&#39;ethnicity&#39;</span><span class="p">,</span> 
                      <span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;income&#39;</span><span class="p">,</span> <span class="s1">&#39;job&#39;</span><span class="p">,</span> <span class="s1">&#39;last_online&#39;</span><span class="p">,</span> <span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="s1">&#39;sign&#39;</span><span class="p">]</span>
+
 <span class="n">dating_profiles</span> <span class="o">=</span> <span class="n">dating_profiles</span><span class="p">[</span><span class="n">preferred_columns</span><span class="p">]</span>
 <span class="n">dating_profiles</span><span class="p">[[</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">,</span> <span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="s1">&#39;orientation&#39;</span><span class="p">,</span> <span class="s1">&#39;body_type&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
@@ -467,7 +2323,35 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dating_profiles</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;dating_profiles.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dating_profiles</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(59946, 16)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dating_profiles</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0        22.0
+1        35.0
+2        38.0
+3        23.0
+4        29.0
+         ... 
+59941    59.0
+59942    24.0
+59943    42.0
+59944    27.0
+59945    39.0
+Name: age, Length: 59946, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -592,17 +2476,49 @@ Name: age, dtype: float64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
-        <span class="n">style</span><span class="o">=</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">,</span>
-        <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)})</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Range of age of individuals present on dating app:&#39;</span><span class="p">,</span> 
+      <span class="nb">max</span><span class="p">(</span><span class="n">dating_profiles</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">])</span><span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">dating_profiles</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Range of age of individuals present on dating app: 92
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dating_profiles</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">],</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;viridis&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># perform the analysis of range of income of individuals</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Q1</span> <span class="o">=</span> <span class="n">dating_profiles</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">Q3</span> <span class="o">=</span> <span class="n">dating_profiles</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)</span>
+<span class="n">IQR</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">-</span> <span class="n">Q1</span>
+<span class="n">IQR</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="single-variables">
+<h2>Single Variables<a class="headerlink" href="#single-variables" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+        <span class="n">style</span><span class="o">=</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">,</span>
+        <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)})</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dating_profiles</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">],</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;viridis&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -610,7 +2526,7 @@ Name: age, dtype: float64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
 </pre></div>
 </div>
-<img alt="_images/exploratory-data-analysis_9_1.png" src="_images/exploratory-data-analysis_9_1.png" />
+<img alt="_images/exploratory-data-analysis_59_1.png" src="_images/exploratory-data-analysis_59_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -625,7 +2541,7 @@ Name: age, dtype: float64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;age&#39;, ylabel=&#39;Count&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/exploratory-data-analysis_10_1.png" src="_images/exploratory-data-analysis_10_1.png" />
+<img alt="_images/exploratory-data-analysis_60_1.png" src="_images/exploratory-data-analysis_60_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -669,7 +2585,7 @@ Name: age, dtype: float64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;count&#39;, ylabel=&#39;status&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/exploratory-data-analysis_13_1.png" src="_images/exploratory-data-analysis_13_1.png" />
+<img alt="_images/exploratory-data-analysis_63_1.png" src="_images/exploratory-data-analysis_63_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -686,20 +2602,555 @@ Name: age, dtype: float64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;count&#39;, ylabel=&#39;status&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/exploratory-data-analysis_14_1.png" src="_images/exploratory-data-analysis_14_1.png" />
+<img alt="_images/exploratory-data-analysis_64_1.png" src="_images/exploratory-data-analysis_64_1.png" />
 </div>
 </div>
-<section id="violin-plot">
-<h2>Violin Plot<a class="headerlink" href="#violin-plot" title="Permalink to this headline">#</a></h2>
-<p>A violin plot, introduced by [Hintze-Nelson-1998], is an enhancement to the boxplot
-and plots the density estimate with the density on the y-axis. The density is mirrored
-and flipped over, and the resulting shape is filled in, creating an image resembling a
-violin. The advantage of a violin plot is that it can show nuances in the distribution
-that aren’t perceptible in a boxplot. On the other hand, the boxplot more clearly
-shows the outliers in the data.</p>
 </section>
 <section id="multiple-variables">
 <h2>Multiple Variables<a class="headerlink" href="#multiple-variables" title="Permalink to this headline">#</a></h2>
+<section id="exploring-two-categorical-variables">
+<h3>Exploring two categorical variables<a class="headerlink" href="#exploring-two-categorical-variables" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cars</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;course-data/audi.csv&#39;</span><span class="p">)</span>
+<span class="n">cars</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>model</th>
+      <th>year</th>
+      <th>price</th>
+      <th>transmission</th>
+      <th>mileage</th>
+      <th>fuelType</th>
+      <th>tax</th>
+      <th>mpg</th>
+      <th>engineSize</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A1</td>
+      <td>2017</td>
+      <td>12500</td>
+      <td>Manual</td>
+      <td>15735</td>
+      <td>Petrol</td>
+      <td>150</td>
+      <td>55.4</td>
+      <td>1.4</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>A6</td>
+      <td>2016</td>
+      <td>16500</td>
+      <td>Automatic</td>
+      <td>36203</td>
+      <td>Diesel</td>
+      <td>20</td>
+      <td>64.2</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>A1</td>
+      <td>2016</td>
+      <td>11000</td>
+      <td>Manual</td>
+      <td>29946</td>
+      <td>Petrol</td>
+      <td>30</td>
+      <td>55.4</td>
+      <td>1.4</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A4</td>
+      <td>2017</td>
+      <td>16800</td>
+      <td>Automatic</td>
+      <td>25952</td>
+      <td>Diesel</td>
+      <td>145</td>
+      <td>67.3</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>A3</td>
+      <td>2019</td>
+      <td>17300</td>
+      <td>Manual</td>
+      <td>1998</td>
+      <td>Petrol</td>
+      <td>145</td>
+      <td>49.6</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">,</span>
+        <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">)})</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">cars</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;transmission&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;engineSize&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;fuelType&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x146ad5fd0&gt;
+</pre></div>
+</div>
+<img alt="_images/exploratory-data-analysis_68_1.png" src="_images/exploratory-data-analysis_68_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">crosstab</span> <span class="o">=</span> <span class="n">cars</span><span class="p">[[</span><span class="s2">&quot;transmission&quot;</span><span class="p">,</span> <span class="s2">&quot;fuelType&quot;</span><span class="p">,</span> <span class="s2">&quot;engineSize&quot;</span><span class="p">]]</span>\
+<span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;transmission&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;engineSize&#39;</span><span class="p">,</span>
+                            <span class="n">aggfunc</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">margins</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">crosstab</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;Automatic&#39;</span><span class="p">:</span><span class="s1">&#39;Manual&#39;</span><span class="p">,:]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="20" halign="left">fuelType</th>
+    </tr>
+    <tr>
+      <th>engineSize</th>
+      <th>0.0</th>
+      <th>1.0</th>
+      <th>1.2</th>
+      <th>1.4</th>
+      <th>1.5</th>
+      <th>1.6</th>
+      <th>1.8</th>
+      <th>1.9</th>
+      <th>2.0</th>
+      <th>2.5</th>
+      <th>2.7</th>
+      <th>2.9</th>
+      <th>3.0</th>
+      <th>3.2</th>
+      <th>4.0</th>
+      <th>4.1</th>
+      <th>4.2</th>
+      <th>5.2</th>
+      <th>6.3</th>
+      <th>All</th>
+    </tr>
+    <tr>
+      <th>transmission</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Automatic</th>
+      <td>39.0</td>
+      <td>32.0</td>
+      <td>2.0</td>
+      <td>138.0</td>
+      <td>144.0</td>
+      <td>96.0</td>
+      <td>22.0</td>
+      <td>1.0</td>
+      <td>1532.0</td>
+      <td>21.0</td>
+      <td>2.0</td>
+      <td>25.0</td>
+      <td>546.0</td>
+      <td>3.0</td>
+      <td>76.0</td>
+      <td>1.0</td>
+      <td>13.0</td>
+      <td>14.0</td>
+      <td>1.0</td>
+      <td>2708</td>
+    </tr>
+    <tr>
+      <th>Manual</th>
+      <td>18.0</td>
+      <td>456.0</td>
+      <td>29.0</td>
+      <td>1059.0</td>
+      <td>307.0</td>
+      <td>720.0</td>
+      <td>81.0</td>
+      <td>3.0</td>
+      <td>1684.0</td>
+      <td>2.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4369</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;fuelType&#39;</span><span class="p">][</span><span class="s1">&#39;All&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>transmission
+Automatic    2708
+Manual       4369
+Name: All, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;0&#39;</span><span class="p">:</span><span class="s1">&#39;1.5&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">&#39;0&#39;</span><span class="p">:</span><span class="s1">&#39;1.5&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;fuelType&#39;</span><span class="p">][</span><span class="s1">&#39;All&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;fuelType&#39;</span><span class="p">][</span><span class="s1">&#39;All&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;fuelType&#39;</span><span class="p">][</span><span class="s1">&#39;All&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;fuelType&#39;</span><span class="p">][</span><span class="s1">&#39;All&#39;</span><span class="p">])</span>
+<span class="n">perc_crosstab</span> <span class="o">=</span> <span class="n">df</span>
+<span class="n">perc_crosstab</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="20" halign="left">fuelType</th>
+    </tr>
+    <tr>
+      <th>engineSize</th>
+      <th>0.0</th>
+      <th>1.0</th>
+      <th>1.2</th>
+      <th>1.4</th>
+      <th>1.5</th>
+      <th>1.6</th>
+      <th>1.8</th>
+      <th>1.9</th>
+      <th>2.0</th>
+      <th>2.5</th>
+      <th>2.7</th>
+      <th>2.9</th>
+      <th>3.0</th>
+      <th>3.2</th>
+      <th>4.0</th>
+      <th>4.1</th>
+      <th>4.2</th>
+      <th>5.2</th>
+      <th>6.3</th>
+      <th>All</th>
+    </tr>
+    <tr>
+      <th>transmission</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Automatic</th>
+      <td>39.0</td>
+      <td>32.0</td>
+      <td>2.0</td>
+      <td>138.0</td>
+      <td>144.0</td>
+      <td>96.0</td>
+      <td>22.0</td>
+      <td>1.0</td>
+      <td>1532.0</td>
+      <td>21.0</td>
+      <td>2.0</td>
+      <td>25.0</td>
+      <td>546.0</td>
+      <td>3.0</td>
+      <td>76.0</td>
+      <td>1.0</td>
+      <td>13.0</td>
+      <td>14.0</td>
+      <td>1.0</td>
+      <td>2708</td>
+    </tr>
+    <tr>
+      <th>Manual</th>
+      <td>18.0</td>
+      <td>456.0</td>
+      <td>29.0</td>
+      <td>1059.0</td>
+      <td>307.0</td>
+      <td>720.0</td>
+      <td>81.0</td>
+      <td>3.0</td>
+      <td>1684.0</td>
+      <td>2.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4369</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="exploring-two-numerical-variables">
+<h3>Exploring two numerical variables<a class="headerlink" href="#exploring-two-numerical-variables" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cars</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;price&#39;</span><span class="p">,</span> 
+                            <span class="n">y</span><span class="o">=</span><span class="s1">&#39;mileage&#39;</span><span class="p">,</span> 
+                            <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;royalblue&#39;</span><span class="p">,</span>
+                            <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;price&#39;, ylabel=&#39;mileage&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/exploratory-data-analysis_74_1.png" src="_images/exploratory-data-analysis_74_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span> <span class="n">cars</span><span class="p">,</span> 
+            <span class="n">x</span><span class="o">=</span> <span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span> <span class="s1">&#39;mileage&#39;</span><span class="p">,</span>
+            <span class="n">order</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+            <span class="n">scatter_kws</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;skyblue&quot;</span><span class="p">},</span> <span class="n">line_kws</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;tomato&quot;</span><span class="p">},</span>
+            <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;price&#39;, ylabel=&#39;mileage&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/exploratory-data-analysis_75_1.png" src="_images/exploratory-data-analysis_75_1.png" />
+</div>
+</div>
+</section>
+<section id="exploring-a-numeric-variable-along-with-a-categorical-variable">
+<h3>Exploring a numeric variable along with a categorical variable<a class="headerlink" href="#exploring-a-numeric-variable-along-with-a-categorical-variable" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">,</span>
+        <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">)})</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span> <span class="n">dating_profiles</span><span class="p">,</span>
+            <span class="n">x</span><span class="o">=</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span> <span class="s1">&#39;job&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;age&#39;, ylabel=&#39;job&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/exploratory-data-analysis_78_1.png" src="_images/exploratory-data-analysis_78_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dating_profiles</span><span class="p">[</span><span class="n">dating_profiles</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">100</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>status</th>
+      <th>sex</th>
+      <th>orientation</th>
+      <th>body_type</th>
+      <th>diet</th>
+      <th>drinks</th>
+      <th>drugs</th>
+      <th>education</th>
+      <th>ethnicity</th>
+      <th>height</th>
+      <th>income</th>
+      <th>job</th>
+      <th>last_online</th>
+      <th>location</th>
+      <th>sign</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2512</th>
+      <td>110</td>
+      <td>single</td>
+      <td>f</td>
+      <td>straight</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>67.0</td>
+      <td>-1</td>
+      <td>NaN</td>
+      <td>2012-06-27-22-16</td>
+      <td>daly city, california</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>25324</th>
+      <td>109</td>
+      <td>available</td>
+      <td>m</td>
+      <td>straight</td>
+      <td>athletic</td>
+      <td>mostly other</td>
+      <td>NaN</td>
+      <td>never</td>
+      <td>working on masters program</td>
+      <td>NaN</td>
+      <td>95.0</td>
+      <td>-1</td>
+      <td>student</td>
+      <td>2012-06-30-18-18</td>
+      <td>san francisco, california</td>
+      <td>aquarius but it doesn&amp;rsquo;t matter</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
 </section>
 </section>
 
